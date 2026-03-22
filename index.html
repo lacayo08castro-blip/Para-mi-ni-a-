@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Yassuri 💛</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fff3a0, #ffd54f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+h2 {
+    color: #b8860b;
+}
+
+.flower {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: gold;
+    border-radius: 50%;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100px); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #444;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>🌼 Para Yassuri Gómez 🌼</h2>
+
+    <p>Un pequeño detalle para alguien especial…</p>
+
+    <div class="message">
+        Pase lo que pase…<br>
+        siempre tendrás un lugar en mi corazón 💛<br><br>
+        Hay personas que nunca se olvidan,<br>
+        y tú eres una de ellas 🌼✨
+    </div>
+</div>
+
+<script>
+for (let i = 0; i < 40; i++) {
+    let flower = document.createElement("div");
+    flower.className = "flower";
+    flower.style.left = Math.random() * 100 + "vw";
+    flower.style.animationDuration = (3 + Math.random() * 5) + "s";
+    document.body.appendChild(flower);
+}
+</script>
+
+</body>
+</html>
